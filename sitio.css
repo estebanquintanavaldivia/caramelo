@@ -1,0 +1,271 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.margen-interno{
+    padding: 0 10px;
+}
+    .header{
+        background:url(masaje.jpg);
+        background-position: 30% 40%;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            background: rgba(0,0,0, .1);
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255, .5);
+        }
+            .logo{
+                flex: 1 1 auto;
+            }
+                .logo a{
+                    color: white;
+                    font-size: 25px;
+                }
+                    .logo a:hover{
+                        color: #000000;
+                    }
+            .nav{
+                flex: 1 1 auto;
+                align-items: center;
+            }
+                .nav a{
+                    color: rgb(241, 235, 235);
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    padding: 0px 10px;
+                    letter-spacing: 2px;
+                }
+                .nav a:hover{
+                    color: #000000;
+                }
+            .social{
+                flex: 1 1 auto;
+                display: flex;
+            }
+                .social a{
+                    color: white;
+                    font-size: 25px;
+                    padding: 0px 5px;
+                }
+                .social a:hover{
+                    color: black;
+                }
+
+        .texto-principal{
+            color: #ece9eb;
+            height: 200px;
+            display: flex;
+            align-items: center;
+        }
+            h1{
+                font-family: 'lora',serif;
+                font-size: 25px;
+                font-weight: 300px;
+                text-align: center;
+                line-height: 1.2;
+            }
+    .section{
+        background: white;
+        display: flex;
+    }
+        .articulos{
+           /* background: #93b5e1;*/
+            flex: 1 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+            display: inlineblock;
+        }
+            .articulo{
+                background: #c27fa1;
+                font-size: 13px;
+                letter-spacing: 1px;
+                margin: 5px 5px  0px 0px;
+                flex: 1 1 45%;
+            }
+            .articulo img{
+                width: 100%;
+            }
+            .articulo a{
+                font-size: 13px;
+                padding: 10px;
+                color: black;
+                background: white;
+                margin: 10px 0;
+                display: inline-block;
+            }
+            .articulo a:hover{
+                background: #be5683;
+            }
+            .navegacion{
+                background: #c27fa1;
+                flex: 1 1 100%;
+                margin: 10px 10px  0px 0px;
+            }
+            .navegacion a{
+                text-transform: uppercase;
+                font-size: 15px;
+                color: black;
+                letter-spacing: 2px;
+                padding: 0px 10px;
+            }
+        .aside{
+            flex: 1 1 100%;
+            margin: 10px 5px 10px 0;
+        }
+        .aside img{
+            width: 100%;
+        }
+        h2 {
+            color: black;
+        }
+            .publicidad{
+            }
+    .footer{
+        background: white;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+        .pie{
+            background: white;
+            text-align: center;
+        }
+        .pie a{
+            padding: 0px 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+@media all and (max-width: 850px){
+    .section{
+        flex-direction: column;
+        width: auto;
+        flex: auto;
+    }
+    h1{
+        font-family: 'lora',serif;
+        font-size: 20px;
+        font-weight: 150px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+    .aside{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .aside img{
+        width: 300px;
+    }
+}
+@media all and (max-width: 570px){
+    .articulos{
+        flex-direction: column;
+        width: auto;
+    }
+    h1{
+        font-family: 'lora',serif;
+        font-size: 15px;
+        font-weight: 100px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    .nav a{
+        color: rgb(241, 235, 235);
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 0px 8px;
+        letter-spacing: 1px;
+    }
+    .aside{
+        flex-direction: column;
+    }
+@media all and (max-width: 460px){
+    .articulos{
+        flex-direction: column;
+        width: auto;
+    }
+    .texto-principal{
+        color: #ece9eb;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+        h1{
+            font-family: 'lora',serif;
+            font-size: 15px;
+            font-weight: 100px;
+            text-align: center;
+            line-height: 1.2;
+        }
+    .nav{
+        flex-direction: column;
+    }
+    .nav a{
+        flex-direction: column;
+        color: rgb(241, 235, 235);
+        font-size: 8px;
+        text-transform: uppercase;
+        padding: 0px 5px;
+        letter-spacing: 0px;
+    }
+    .aside{
+        flex-direction: column;
+    }
+
+    @media all and (max-width: 400px){
+        .articulos{
+            flex-direction: column;
+            width: auto;
+        }
+        .texto-principal{
+            color: #ece9eb;
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+            h1{
+                font-family: 'lora',serif;
+                font-size: 15px;
+                font-weight: 100px;
+                text-align: center;
+                line-height: 1.0;
+            }
+        .nav{
+            flex-direction: column;
+        }
+        .nav a{
+            flex-direction: column;
+            color: rgb(241, 235, 235);
+            font-size: 9px;
+            text-transform: uppercase;
+            padding: 0px 3px;
+            letter-spacing: 0px;
+        }
+        .aside{
+            flex-direction: column;
+        }
